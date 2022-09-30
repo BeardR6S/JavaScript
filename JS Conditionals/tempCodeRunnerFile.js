@@ -1,0 +1,1 @@
+console.log("You can eat from the kid's menu");
