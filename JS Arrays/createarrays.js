@@ -7,13 +7,13 @@ var literalArray = ['Hi', 'Hello', 'Sup'];
 var mixedArray = ['Howdy', 1, ['a', 'b', 'c'], {name: 'Brandon' }, function greeting() {console.log('Hey there');}]
 
 //!Grab a Single element, simple array
-literalArray[0]
+literalArray[0] //?
 
 //! To call for nested arrays its as follows. First 2 is to call the Array and then run 2 again to call for 'C'.
 
-mixedArray[2][2]; //*Returns the 'c'.
+mixedArray[2][2];  //*Returns the 'c'. 
 
-mixedArray[3]; //!Returns Object {name: 'Kristine'}
+mixedArray[3]; //!Returns Object {name: 'Kristine'} 
 
 mixedArray[3].name; //!Returns "Kristine"
 
