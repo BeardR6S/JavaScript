@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Management in JavaScript</title>
+</head>
+<body>
+</body>
+
+<script>
+    class APIError extends Error {
+        constructor(msg = 'An API Error occured', ...params) {
+            super(...params);
+
+            this.msg = msg;
+        }
+    }
+    var request = new XMLHttpRequest();
+
+    request.open('GET', 'http://api.dailysmarty.com/posts', true);
+
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+            console.log(data);
+        } else {
+            throw new APIError('ApiError', `An API error occured wit a status code of $(request.status)`)
+        }
+    }
+
+    request.send();
+</script>
+</html>

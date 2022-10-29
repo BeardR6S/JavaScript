@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lodash Demo</title>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    </head>
+    <body>
+        <!-- http://houston.astros.mlb.com/stats/sortable.jsp?c_id=hou#playerType=ALL&elem=%5Bobject+Object%5D&tab_level=child&click_text=Sortable+Player+hitting&game_type='R'&season=2017&season_type=ANY&league_code='MLB'&sectionType=sp&statType=hitting&page=1&ts=1516406323861&sortColumn=g&sortOrder='desc'&extended=0 -->
+</body>
+
+    <script>
+        const links = [
+            "https://google.com",
+            "https://devcamp.com",
+            "https://airbnb.com"
+        ];
+
+        const webLinks = _.reduce(links, function(content, link) {
+            debugger;
+            return `<a href='${link}'>${link}</a><br>`.concat(content);
+        }, '');
+
+        console.log(webLinks);
+    </script>
+</html>

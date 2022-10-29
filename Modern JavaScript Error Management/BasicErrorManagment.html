@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Error Management in JavaScript</title>
+</head>
+<body>
+</body>
+
+<script>
+    function siteComponent(func) {
+        return func();
+    }
+
+    widget = () => {
+        return '<div>Hi There</div>';
+    }
+
+    try {
+        console.log(siteComponent(widget));
+    } catch(e) {
+        console.log('An error occured with the siteComponent', e);
+    }
+
+    //Only reason catch block works here is if the (widget) gets changed to something else.
+</script>
+</html>
